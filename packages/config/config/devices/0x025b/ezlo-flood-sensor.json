@@ -15,25 +15,6 @@
 	},
 	"paramInformation": [
 		{
-			"#": "1",
-			"label": "Water Leak Alarm Intermittent Interval",
-			"description": "Defines how often the buzzer sound and LED flash repeat when a leak is detected.",
-			"valueSize": 1,
-			"minValue": 5,
-			"maxValue": 60,
-			"defaultValue": 5
-		},
-		{
-			"#": "2",
-			"label": "Temperature High Alarm Threshold",
-			"description": "Trigger an alarm when the temperature exceeds this value.",
-			"valueSize": 1,
-			"minValue": -20,
-			"maxValue": 60,
-			"defaultValue": 35,
-			"unsigned": false
-		},
-		{
 			"#": "14",
 			"label": "Basic Set",
 			"description": "Sends BASIC SET commands to nodes associated with group 2.",
@@ -72,7 +53,7 @@
 		{
 			"#": "16",
 			"label": "Temperature Offset",
-			"description": "Temperature calibration offset in 0.1-degree increments.",
+			"description": "Temperature calibration offset in 0.1°F steps (-18.0°F to +18.0°F).\n• 0 = 0.0°F (Disabled)\n• 1–180 = -0.1°F to -18.0°F (e.g., 30 = -3.0°F)\n• 181–360 = +0.1°F to +18.0°F (calculated as 180 + tenths, e.g., 210 = +3.0°F)",
 			"valueSize": 2,
 			"minValue": 0,
 			"maxValue": 360,
@@ -108,9 +89,9 @@
 		{
 			"#": "19",
 			"label": "Temperature Report Interval",
-			"description": "Periodic temperature reports are sent at intervals of 10 minutes.",
+			"description": "Sets the interval for periodic temperature reports in increments of 10 minutes.\n• Value is multiplied by 10 minutes (e.g., 3 = 30 minutes, 6 = 1 hour, 144 = 24 hours).\n• Range: 30 minutes (3) to 40 hours (240).",
 			"valueSize": 1,
-			"unit": "10 minutes",
+			"unit": "x 10 minutes",
 			"minValue": 3,
 			"maxValue": 240,
 			"defaultValue": 144,
