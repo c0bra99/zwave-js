@@ -71,7 +71,8 @@
 		},
 		{
 			"#": "18",
-			"label": "Moving Alarm",
+			"label": "Product Moved / Tamper Alarm",
+			"description": "Sends a BASIC SET command to Group 2 associated nodes when the 'Tampering, product moved' event is triggered (e.g., if bumped, tilted, or floating in water).",
 			"valueSize": 1,
 			"defaultValue": 1,
 			"allowManualEntry": false,
@@ -109,8 +110,8 @@
 		},
 		{
 			"#": "21",
-			"label": "Temperature Report Threshold",
-			"description": "Disables temperature reports at 0; positive values enable reporting with 0.1-degree accuracy.",
+			"label": "Temperature Report Change Threshold",
+			"description": "Defines the minimum temperature change required to trigger an immediate unsolicited report.\n• 0 = Disabled (reports sent only via interval parameter 19)\n• 1–180 = 0.1°F to 18.0°F change threshold (e.g., 18 = 1.8°F change)",
 			"valueSize": 1,
 			"unit": "0.1°F",
 			"minValue": 0,
